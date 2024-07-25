@@ -130,3 +130,32 @@ fn main() {
     let area_calc = Square {side: 2.0};
     println!("Calculation for the area of the rectangle using a trait is {}", area_calc.area());
 }
+
+
+struct Circle {
+
+    radius: f64,
+
+}
+
+impl Circle {
+
+    fn area(&self) -> f64 {
+
+        3.14 * (self.radius * self.radius)
+
+    }
+
+    fn perimeter(&self) -> f64 {
+
+        2.0 * 3.14 * self.radius
+
+    }
+
+}
+
+let circle = Circle { radius: 10.0 };
+
+println!("The area of the circle is {}", circle.area());
+
+println!("The perimeter of the circle is {}", circle.perimeter());
